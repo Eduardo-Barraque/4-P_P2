@@ -1,0 +1,141 @@
+body{
+    display: grid;
+    grid-template-areas: "cabecalho" "imagem" "corpo" "rodape";
+    border: 0px;
+    margin: 0px;
+}
+/*    Header    */
+body header{
+    display: grid;
+    grid-template-areas: "titulo barra";
+    grid-area: cabecalho;
+}
+/*Imagem com lema*/
+body aside{
+    grid-area: imagem;
+    display: grid;
+    grid-template-areas: "mostrando talvez_mostrando";
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto;
+    height: 35vh;
+}
+#mostrando{
+    grid-area: mostrando;
+    text-align: end;
+    justify-self: center;
+    align-items: center;
+    font-size: 4vw;
+    background-color: #011627;
+    background-size: 100%;
+    color: white;
+}
+#talvez_mostrando{
+    grid-area: talvez_mostrando;
+    background-image: url('/static/img/cartao_credito.png');
+    background-repeat: no-repeat;
+    background-size:50vw 50vh;
+}
+body h1{
+    grid-area:titulo;
+    font-size: 2vw;
+    border: 0px;
+    margin: 0px;
+}
+body nav{
+    grid-area: barra;
+}
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+/*    Corpo    */
+body article{
+    grid-area: corpo;
+}
+/*    Footer   */
+
+body footer{
+    grid-area: rodape;
+    background-color: #011627;
+    color: white;
+    display: grid;
+    grid-template-areas: "sedes contato criadores" ;
+}
+/*    Contato    */
+.contato{
+    grid-area: contato;
+    display: grid;
+    grid-template-areas: 
+    "mensagem"
+    "falar";
+    height: 20vh;
+}
+#mensagem{
+    grid-area: mensagem;
+    justify-self: center;
+    align-self: flex-end;
+}
+#mensagem input{
+    width: 15vw;
+    height: 5vh;
+    font-size: 0.8vw;
+    background: #FF9F1C;
+    color: white;
+}
+
+#falar input{
+    width: 15vw;
+    height: 5vh;
+    font-size: 0.8vw;
+    background: #FF9F1C;
+    color: white;
+}
+
+#falar{
+    grid-area: falar;
+    justify-self: center;
+    align-self: flex-start;
+    margin-top: 1vh;
+}
+
+/*    Sedes    */
+.sedes{
+    grid-area: sedes;
+    display: grid;
+    grid-template-areas: 
+    "localizacao localizacao" 
+    "SP RJ";
+}
+#sedeSP{
+    grid-area: SP;
+    font-size: 1vw;
+}
+#sedeRJ{
+    grid-area: RJ;
+    font-size: 1vw;
+}
+#localizacao{
+    grid-area: localizacao;
+    font-size: 2vw;
+}
+/*    Criadores    */
+.criadores{
+    grid-area: criadores;
+    display: grid;
+    grid-template-areas:"criado patrocinado" ;
+}
+#criado{
+    grid-area: criado;
+    font-size: 0.8vw;
+    align-self: end;
+    justify-self: end;
+}
+#patrocinado{
+    grid-area: patrocinado;
+    font-size: 0.8vw;
+    align-self: center;
+    align-self: end;
+    margin-left: 1vw;
+}
