@@ -2,18 +2,19 @@ from application.model.entity.produto import Produto
 import json
 class Produto_dao:
     def __init__(self):
-        self._lista_produtos = []
+        self.__produtos = []
         with open("products.json") as documento:
             produtos = json.load( documento)
             documento.close()
 
         for i in produtos:
-            id = produtos["id"]
-            nome = produtos["nome"]
-            imagem = produtos["imagem"]
-            oldprice = produtos["oldprice"]
-            price = produtos["price"]
-            description = produtos["description"]
+            
+            id = i['id']
+            nome = i['name']
+            imagem = i["image"]
+            oldprice = i["oldPrice"]
+            price = i["price"]
+            description = i["description"]
             carregar_produto = Produto(
                 '{}'.format(id),
                 '{}'.format(nome),
@@ -21,7 +22,13 @@ class Produto_dao:
                 '{}'.format(oldprice),
                 '{}'.format(price),
                 '{}'.format(description))
-            self.__lista_produtos.append(carregar_produto)
+            self.__produtos.append(carregar_produto)
+
+
+    def produtos_list(self):
+        return self.__produtos
+    
+
         
             
 

@@ -26,7 +26,13 @@
     <article>
         <div>Produtos</div>
         <div class="produtos">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis earum ducimus nesciunt quisquam repellat sit nihil ullam. Impedit earum odio placeat exercitationem accusantium, rerum saepe eaque aut laboriosam perferendis magni dolores maxime molestias quisquam rem adipisci voluptatum labore suscipit assumenda quidem modi itaque nulla sapiente. Aut dignissimos, laudantium fuga reiciendis dolorum consequuntur impedit sequi adipisci omnis quas! Libero eligendi voluptas rerum aliquam accusamus omnis repellendus inventore nobis ea. Quasi nihil dolores nemo velit ab facilis tempore perferendis excepturi sit necessitatibus at tempora rerum deserunt minus, delectus asperiores totam aspernatur quos, omnis cupiditate! Ab repellat totam aliquid error dicta aperiam! Culpa?
+            {%for item in produtos_list%}
+                <div class="imagem_produto">
+                    <img src="{{url_for('static', filename=item.imagem)}}">
+                </div>
+                <div class="informacoes">
+                </div>
+            {%endfor%}
         </div>
     </article>
     <footer>
