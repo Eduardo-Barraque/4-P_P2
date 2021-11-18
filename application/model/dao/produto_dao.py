@@ -27,7 +27,7 @@ class Produto_dao:
 
     def produtos_list(self):
         return self.__produtos
-    
+
 
         
             

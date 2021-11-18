@@ -6,3 +6,8 @@ from application import app
 def home():
     produtos_lista = Produto_dao().produtos_list()
     return render_template("home.html", produtos_lista = produtos_lista)
+
+@app.route("/produtos", methods=['GET'])
+def produtos():
+    produtos_lista = Produto_dao().produtos_list()
+    return render_template("produto.html", produtos_lista = produtos_lista)

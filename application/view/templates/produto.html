@@ -1,0 +1,14 @@
+<div>Produtos</div>
+<div class="produtos">
+    {%for item in produtos_list%}
+        <div class="imagem_produto">
+            <img src="{{url_for('static', filename=item.imagem)}}">
+        </div>
+        <div class="informacoes">
+            <div>{{item.nome}} </div>
+            <div>de R${{item.oldprice}}</div>
+            <div>por R${{item.price}}</div>
+            <button value="Comprar"></button>
+        </div>
+    {%endfor%}
+</div>

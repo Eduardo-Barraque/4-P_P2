@@ -1,3 +1,4 @@
+
 body{
     display: grid;
     grid-template-areas: "cabecalho" "imagem" "corpo" "rodape";
@@ -138,4 +139,26 @@ body footer{
     align-self: center;
     align-self: end;
     margin-left: 1vw;
+}
+@media screen and (min-width: 200px) and (max-width: 768px) {
+    body aside{
+        grid-area: imagem;
+        display: grid;
+        grid-template-areas: "mostrando";
+        grid-template-columns: 100vw;
+        grid-template-rows: auto;
+        height: 50vh;
+        max-height: 100%;
+    }
+    #talvez_mostrando{
+        display: none;
+    }
+    #mostrando{
+    background-image: url('/static/img/cartao_credito.png');
+    background-repeat: no-repeat;
+    background-size:100vw 100vh;
+    color:darkgreen;
+    font-size: 5vw;
+    
+    }
 }

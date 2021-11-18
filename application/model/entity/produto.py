@@ -1,50 +1,64 @@
 class Produto:
-    def __init__( self, id:int, nome:str, imagem:str, oldprice:int, price:int, description:str,):
-        self.__nome = nome
-        self.__id = id
-        self.__imagem = imagem
-        self.__oldprice = oldprice
-        self.__price = price
-        self.__description = description
+    def __init__( self, id:int, nome:str, imagem:str, oldprice:float, price:float, description:str):
+        self._nome = nome
+        self._id = id
+        self._imagem = imagem
+        self._oldprice = oldprice
+        self._price = price
+        self._description = description
     
     @property
     def id(self):
-        return self.__id
+        return self._id
     @id.setter
     def id(self, value):
-        self.__id = value
+        self._id = value
 
     @property
     def nome(self):
-        return self.__nome
+        return self._nome
     @nome.setter
     def nome(self, value):
         self.__nome = value
 
     @property
     def imagem(self):
-        return self.__imagem
+        return self._imagem
     @imagem.setter
     def imagem(self, value):
-        self.__imagem = value
+        self._imagem = value
 
     @property
     def oldprice(self):
-        return self.__oldprice
+        return self._oldprice
     @oldprice.setter
     def oldprice(self, value):
-        self.__oldprice = value
+        self._oldprice = value
 
     @property
     def price(self):
-        return self.__price
+        return self._price
     @price.setter
     def price(self, value):
-        self.__price = value
+        self._price = value
 
     @property
     def description(self):
-        return self.__description
+        return self._description
     @description.setter
     def description(self, value):
-        self.__description = value
+        self._description = value
+    
+    @property
+    def parcela(self):
+        return self._parcela
+    @parcela.setter
+    def parcela(self, value):
+        self._parcela = value
+    
+    @property
+    def valorParcela(self):
+        return self._valorParcela
+    @valorParcela.setter
+    def valorParcela(self, value):
+        self._valorParcela = value
